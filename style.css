@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.game {
+  text-align: center;
+  width: 500px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  background: #444;
+  height: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 10px;
+  width: 0%;
+  background: #2a9d8f;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.answer-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1f4068;
+  color: white;
+  transition: 0.2s;
+}
+
+.answer-btn:hover {
+  transform: scale(1.05);
+}
+
+.correct {
+  background: #2a9d8f;
+}
+
+.wrong {
+  background: #e63946;
+}
+
+/* Mensagem principal */
+.main-message {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  background: linear-gradient(90deg, #2a9d8f, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseText 1.5s infinite alternate;
+}
+
+@keyframes pulseText {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* Botão principal */
+#startBtn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2a9d8f, #00b4d8);
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+#startBtn:active {
+  transform: scale(0.95);
+}
